@@ -3,15 +3,17 @@ import "./App.css";
 import TasksList from "./components/ui/TasksList";
 import TaskForm from "./components/ui/TaskForm";
 import type {Task} from "./data/task.ts";
+import {createTask} from "./utils/taskService.ts";
 
 function App() {
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState<string>("");
   const [tasks, setTasks] = useState<Task[]>(() => {
     const stored = localStorage.getItem("taskList");
     return stored ? JSON.parse(stored) : [];
   });
 
-  const addTask = (newTask: Task) => {
+  const addTask = (newTaskLabel: string) => {
+    const newTask = createTask(newTaskLabel)
     const updated = [...tasks, newTask];
     setTasks(updated);
     localStorage.setItem("taskList", JSON.stringify(updated));
