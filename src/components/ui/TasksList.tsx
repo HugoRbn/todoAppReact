@@ -12,7 +12,7 @@ const TasksList = ({ tasks, removeTask }: { tasks: Task[]; removeTask: (task: st
           </li>
         ))
       ) : (
-        <p className="empty-state">Aucune tâche</p>
+        <li className="empty-state">Aucune tâche</li>
       )}
     </ul>
   );
