@@ -25,9 +25,10 @@ function App() {
   };
 
   return (
-    <div>
-      <TaskForm task={task} setTask={setTask} addTask={() => addTask(task)}></TaskForm>
-      <TasksList tasks={tasks} removeTask={(t) => removeTask(t)}></TasksList>
+    <div className="card">
+      <h1>Mes tâches</h1>
+      <TaskForm task={task} setTask={setTask} addTask={() => addTask(task)} />
+      <TasksList tasks={tasks} removeTask={(t) => removeTask(t)} />
     </div>
   );
 }
