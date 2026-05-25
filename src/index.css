@@ -5,72 +5,113 @@
 }
 
 body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  color: #1e293b;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.card h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.taskInputButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
 }
 
 .taskInput {
-  padding: 8px 12px;
-  border: 1.5px solid #cbd5e1;
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
   border-radius: 8px;
   font-size: 14px;
+  font-family: 'Inter', sans-serif;
   outline: none;
   transition: border-color 0.2s;
-  margin-right: 8px;
+  color: #1e293b;
 }
 
 .taskInput:focus {
-  border-color: #64b5f6;
+  border-color: #3b82f6;
 }
 
 .button {
-  padding: 8px 16px;
-  color: white;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .button-add {
   background-color: #3b82f6;
+  color: #ffffff;
 }
 
 .button-add:hover {
   background-color: #2563eb;
-}
-
-.button-suppr {
-  background-color: darkred;
-}
-
-.button-suppr:hover {
-  background-color: red;
-}
-
-.button-add:hover {
-  background-color: #2563eb;
-}
-
-.taskInputButton {
-  display: flex;
-  flex-direction: row;
 }
 
 .taskList {
   list-style: none;
   margin-top: 16px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .taskList li {
-  padding: 10px 14px;
-  background-color: #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f8fafc;
   border-radius: 8px;
   font-size: 14px;
-  margin-bottom: 8px;
   border-left: 3px solid #3b82f6;
+}
+
+.button-suppr {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.button-suppr:hover {
+  background-color: #fff1f2;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 16px;
 }
